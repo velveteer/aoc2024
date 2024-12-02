@@ -28,15 +28,10 @@ common common-options
   hs-source-dirs:   src
   default-language: GHC2024
 
-test-suite doctest
-  type:             exitcode-stdio-1.0
-  main-is:          doctests.hs
-  default-language: GHC2024
-  ghc-options:      -threaded
-  build-depends:
-    , base
-    , doctest  ^>=0.23.0
-
 executable day1
   import:  common-options
   main-is: Day1.hs
+
+executable day2
+  import:  common-options
+  main-is: Day2.hs
