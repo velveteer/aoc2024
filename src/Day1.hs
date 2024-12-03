@@ -2,8 +2,6 @@
 {-# LANGUAGE ViewPatterns #-}
 {-# OPTIONS_GHC -Wno-incomplete-uni-patterns #-}
 
-module Main where
-
 import Control.Arrow
 import Data.Bifunctor (bimap)
 import Data.List qualified as List

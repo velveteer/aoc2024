@@ -21,12 +21,12 @@ cargo install ghciwatch
 ### Fire up GHCi
 
 ```sh
-cabal repl
+cabal repl day<N>
 ```
 
 ### Or fire up ghciwatch
 
 ```sh
-ghciwatch --test-ghci 'Test.DocTest.doctest ["src"]'
+ghciwatch --test-ghci 'Test.DocTest.doctest ["src/Day<N>.hs"]'
 ```
 This will reload the interpreter and run doctests on every file save.

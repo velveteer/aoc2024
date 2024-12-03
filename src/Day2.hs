@@ -1,8 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# OPTIONS_GHC -Wno-incomplete-uni-patterns #-}
 
-module Day2 where
-
 import Control.Arrow
 import Data.Ix
 import Data.Monoid (All (..))

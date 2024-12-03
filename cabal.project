@@ -1,2 +1,4 @@
 packages: .
 multi-repl: True
+-- for doctest
+write-ghc-environment-files: always
