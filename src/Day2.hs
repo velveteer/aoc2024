@@ -12,7 +12,6 @@ import Text.Read qualified as Text
 
 main :: IO ()
 main = do
-  Text.putStrLn "day 2"
   input <- Text.readFile "text/day2.txt"
   print $ day2a input
   print $ day2b input
