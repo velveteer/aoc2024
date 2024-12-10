@@ -46,17 +46,17 @@ day6b =
     >>> length
 
 futureWalls :: Grid -> Guard -> [Pos]
-futureWalls g ((x, y), (i, j))
-  = iterate (\(!x', !y') -> (x' + i, y' + j)) (x, y)
-  & takeWhile (\p -> g Map.!? p == Just '.')
+futureWalls g ((x, y), (i, j)) =
+  iterate (\(!x', !y') -> (x' + i, y' + j)) (x, y)
+    & takeWhile (\p -> g Map.!? p == Just '.')
 
-hasDuplicate :: [Guard] ->  Bool
+hasDuplicate :: [Guard] -> Bool
 hasDuplicate = go Set.empty
-  where
-    go _ [] = False
-    go seen (x:xs)
-      | x `Set.member` seen = True
-      | otherwise = go (Set.insert x seen) xs
+ where
+  go _ [] = False
+  go seen (x : xs)
+    | x `Set.member` seen = True
+    | otherwise = go (Set.insert x seen) xs
 
 type Pos = (Int, Int)
 type Dir = (Int, Int)
